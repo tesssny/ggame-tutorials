@@ -32,5 +32,5 @@ def step():
             reverse(ball)
             
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
-myapp.run()
+myapp.run(step)
 
