@@ -18,7 +18,7 @@ ball = Sprite(ball_asset, (0, 0))
 ball.scale = 0.1
 # custom attributes
 ball.dir = 1
-ball.go = Tru
+ball.go = True
 
 myapp = App(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
