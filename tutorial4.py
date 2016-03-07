@@ -30,6 +30,16 @@ class SpaceShip(Sprite):
         Frame(227,0,292-227,125), 4, 'vertical')
 
     def __init__(self, position):
+        
+        def step(self):
+            for ship in self.getSpritesbyClass(SpaceShip):
+                ship.step()
+        
+        def step(self):
+            self.x += self.vx
+            self.y += self.vy
+            self.rotation += self.vr
+        
         super().__init__(SpaceShip.asset, position)
         self.vx = 1
         self.vy = 1
