@@ -17,6 +17,10 @@ class SpaceGame(App):
         SpaceShip((100,100))
         SpaceShip((150,150))
         SpaceShip((200,50))
+        
+        def step(self):
+            for ship in self.getSpritesbyClass(SpaceShip):
+                ship.step()
 
 class SpaceShip(Sprite):
     """
@@ -27,6 +31,9 @@ class SpaceShip(Sprite):
 
     def __init__(self, position):
         super().__init__(SpaceShip.asset, position)
+        self.vx = 1
+        self.vy = 1
+        self.vr = 0.01
 
 myapp = SpaceGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
